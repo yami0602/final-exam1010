@@ -9,4 +9,4 @@ b. "2", string
 c. "11", string
 d. 11, number
 
-Answer:
+Answer: a 2, number

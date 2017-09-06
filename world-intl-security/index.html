@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+
+            
+
+
+
         <nav class="blue darken-4" role="navigation" id="navbar">
             <div class="nav-wrapper">
               <a href="#" class="brand-logo center"><img src="img/logo.gif" alt="World International Security"></a>
@@ -27,6 +32,15 @@
               <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
         </nav>
+
+        <form action="http://fvi-grad.com:4004/fakeform." method="POST">
+            
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input id="button" type="button" value="send">
+        </form>
+
 
         <div class="container">
             <div class="row">
@@ -99,11 +113,46 @@
                             <span class="card-title services-title">Our Services &gt;</span>
                         </div>
                     </a>
+
+                    
                   </div>
                 </div>
             </div>
         </div>
 
-        <script>$('.button-collapse').sideNav();</script>
+
+        <script>$('.button-collapse').sideNav();
+
+                $('.brand-logo').click(function(){
+                    console.log("Clicked on logo")
+                })
+
+                $("#submit").click(function(){
+var name = $("#name").val();
+var email = $("#email").val();
+var password = $("#password").val();
+var contact = $("#contact").val();
+
+$.ajax({
+type: "POST",
+url: "http://fvi-grad.com:4004/fakeform",
+data: dataString,
+cache: false,
+success: function(result)
+
+{
+    if (isset($_POST['submit'])) {
+        echo '<input id="button" type="button" name="submit" value="Message Sent">'; //Changed type submit to button
+        } else {
+        echo '<input id="button" type="submit" name="submit" value="Error sending message">';
+        }
+}
+
+
+
+      
+
+
+                                                </script>
     </body>
 </html>

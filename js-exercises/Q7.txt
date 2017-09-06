@@ -11,4 +11,4 @@ b: "50thug life"
 c: "thug life510"
 d: "thug life50"
 
-Answer:
+Answer: b :"50thug life"
